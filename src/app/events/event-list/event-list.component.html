@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col">
+        <button class="btn btn-info">New Event</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <a href="#" class="list-group" *ngFor="let item of events">
+            <h4 class="list-group-item-heading">{{item.name}}</h4>
+            <p class="list-group-item-text">{{item.description}}</p>
+            <img [src]="item.image" alt="item.name" class="img-fluid">
+        </a>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <app-event-item></app-event-item>
+</div> -->
