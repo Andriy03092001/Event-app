@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Event } from "../event.model";
 
 @Component({
@@ -13,6 +13,12 @@ export class EventListComponent implements OnInit {
     new Event('HTML/CSS', 'list and html', 'https://i.ytimg.com/vi/CeJmtFatBuY/maxresdefault.jpg'),
     new Event('React', 'Work with routing components', 'https://o7planning.org/ru/12137/cache/images/i/26762061.png'),
   ]
+
+  @Output() SelectedEvent = new EventEmitter<Event>();
+
+  onSelectEvent(item: Event) {
+    this.SelectedEvent.emit(item);
+  }
 
   constructor() { }
 

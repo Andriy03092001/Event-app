@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Requirement } from "./requirements.model";
 
 @Component({
   selector: 'app-requirements-list',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequirementsListComponent implements OnInit {
 
+  requirements: Requirement[] = [
+    new Requirement("Java Script", "Base know promise"),
+    new Requirement("HTML/JS/SCSS", "Rest API + JULP")
+  ];
+
   constructor() { }
+
 
   ngOnInit(): void {
   }

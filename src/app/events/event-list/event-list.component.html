@@ -5,14 +5,11 @@
 </div>
 <div class="row">
     <div class="col">
-        <a href="#" class="list-group" *ngFor="let item of events">
-            <h4 class="list-group-item-heading">{{item.name}}</h4>
-            <p class="list-group-item-text">{{item.description}}</p>
-            <img [src]="item.image" alt="item.name" class="img-fluid">
-        </a>
+
+        <app-event-item *ngFor="let item of events" [event]="item" (click)="onSelectEvent(item)"></app-event-item>
+
     </div>
 </div>
 
 <!-- <div class="row">
-    <app-event-item></app-event-item>
 </div> -->
